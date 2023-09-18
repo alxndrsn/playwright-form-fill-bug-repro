@@ -1,0 +1,18 @@
+name: playwright form filling
+
+on: push
+
+jobs:
+  oidc-e2e-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js 18
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.17.0
+        cache: yarn
+    - run: yarn
+    - run: yarn serve &
+    - run: npx playwright install && npx playwright install-deps
+    - run: yarn test

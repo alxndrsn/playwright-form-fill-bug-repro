@@ -1,0 +1,12 @@
+{
+  "name": "playwright-form-fill-bug-repro",
+  "packageManager": "yarn@3.5.0",
+  "scripts": {
+    "serve": "serve .",
+    "test": "playwright test --browser all"
+  },
+  "dependencies": {
+    "@playwright/test": "1.37.1",
+    "serve": "^14.2.1"
+  }
+}
