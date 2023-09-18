@@ -3,7 +3,7 @@ name: playwright form filling
 on: push
 
 jobs:
-  oidc-e2e-test:
+  test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
